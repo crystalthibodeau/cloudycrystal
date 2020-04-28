@@ -1,11 +1,24 @@
 .jumbotron {
     background-image: url("https://images.pexels.com/photos/53893/pexels-photo-53893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     /*background-size: initial;*/
-    opacity: 0.7;
+    opacity: 0.9;
     height: 60vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.landing-text{
-    color: white;
+.display-1{
+    color: white !important;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 1.5em;
+}
+@media (max-width: 320px)
+{
+    .display-1{
+        font-size: 4em;
+    }
+    .jumbotron{
+        height: 50vh;
+        width: 100%;
+    }
+
 }
