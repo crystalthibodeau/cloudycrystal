@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" class="h-100">
 <head th:replace="partials/head :: head('Finding Crystal')"></head>
 <body>
 <div class="jumbotron">
@@ -8,6 +8,10 @@
             <h1 class="display-1">Crystal</h1>
         </div>
     </div>
+</div>
+<nav th:replace="partials/navbar :: navbar"></nav>
+<div>
+    <p>test test test</p>
 </div>
 </body>
 </html>
