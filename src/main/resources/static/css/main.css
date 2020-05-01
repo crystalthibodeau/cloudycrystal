@@ -1,24 +1,102 @@
+
+/*===================================================== Navbar CSS ===================================================*/
+.navbar {
+    padding: 0 !important;
+}
+.navbar-toggler-icon {
+    height: auto!important;
+}
+.navbar-nav{
+    background-color:#4DB9EF;
+}
+
+.navbar{
+    background-color:#4DB9EF;
+}
+
+.navbar-a-links{
+    color: white !important;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+}
+
+.navbar-a-links:hover {
+    color:hotpink !important;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.navbar-brand-text {
+    font-family: 'Pacifico', cursive;
+    color: white !important;
+    transition: all .4s ease-in-out;
+    font-size: 35px;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.navbar-brand-text:hover {
+    color:hotpink !important;
+    text-decoration: none;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+/*.nav-logo {*/
+/*    height: 2.5em;*/
+/*    width: auto;*/
+/*}*/
+
+/*.nav-logo:hover {*/
+/*    -ms-transform: scale(1.1); !* IE 9 *!*/
+/*    -webkit-transform: scale(1.1); !* Safari 3-8 *!*/
+/*    transform: scale(1.1);*/
+/*}*/
+
+.navbar-btn {
+    color: white !important;
+    transition: all .4s ease-in-out;
+    outline: none;
+    border: 0;
+    font-weight: bold;
+    background: #4DB9EF;
+}
+.navbar-btn:hover{
+    color:hotpink !important;
+    text-decoration: none;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+/*=================================================== JUMBOTRON CSS ==================================================*/
+
 .jumbotron {
     background-image: url("https://images.pexels.com/photos/53893/pexels-photo-53893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     /*background-size: initial;*/
     border-radius: 0;
     opacity: 0.9;
-    height: 60vh !important;
+    height: 55vh !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding-bottom: 0;
+    padding: 0;
     margin-bottom: 0;
 }
+
+.display-1{
+    color: white !important;
+    font-family: 'Pacifico', cursive;
+}
+
 @media (max-width: 320px)
 {
     .display-1{
         color: white !important;
         font-size: 4em !important;
-        margin-bottom: 0 !important;
-
     }
     .jumbotron{
-        height: 50vh !important;
+        /*height: 50vh !important;*/
         width: 100% !important;
     }
 
@@ -38,11 +116,9 @@
     .display-1{
         color: white !important;
         font-size: 4em !important;
-        margin-bottom: 0 !important;
-
     }
     .jumbotron{
-        height: 50vh !important;
+        /*height: 50vh !important;*/
         width: 100% !important;
         margin-bottom: 0 !important;
 
@@ -54,11 +130,9 @@
     .display-1{
         color: white !important;
         font-size: 5em !important;
-        margin-bottom: 0 !important;
-
     }
     .jumbotron{
-        height: 50vh !important;
+        /*height: 50vh !important;*/
         width: 100% !important;
     }
 }
@@ -68,14 +142,10 @@
     .display-1{
         color: white !important;
         font-size: 8em !important;
-        margin-bottom: 0 !important;
-
     }
     .jumbotron{
-        height: 50vh !important;
+        /*height: 50vh !important;*/
         width: 100% !important;
-        margin-bottom: 0 !important;
-
     }
 }
 
@@ -84,11 +154,9 @@
     .display-1{
         color: white !important;
         font-size: 8em !important;
-        margin-bottom: 0 !important;
-
     }
     .jumbotron{
-        height: 50vh !important;
+        /*height: 50vh !important;*/
         width: 100% !important;
     }
 }
