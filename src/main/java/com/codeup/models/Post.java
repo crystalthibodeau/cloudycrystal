@@ -1,9 +1,6 @@
 package com.codeup.models;
 
 import javax.persistence.*;
-import java.net.UnknownServiceException;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name="posts")
@@ -106,6 +103,22 @@ public class Post {
 //    public void setComments(List<Comments> comments) {
 //        this.comments = comments;
 //    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public String getPostedAt() {
+        return postedAt;
+    }
+
+    public void setPostedAt(String postedAt) {
+        this.postedAt = postedAt;
+    }
 }
 
 

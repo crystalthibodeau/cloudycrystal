@@ -47,7 +47,7 @@ public class User {
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Post> recipes;
+    private List<Post> Posts;
 
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 //    private List<Comments> comments;
@@ -138,5 +138,12 @@ public class User {
         this.profileImageUrl = profileImageUrl;
     }
 
+    public List<Post> getPosts() {
+        return Posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        Posts = posts;
+    }
 }
 
