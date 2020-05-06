@@ -89,6 +89,12 @@
     font-family: 'Pacifico', cursive;
 }
 
+.height-90{
+    height: 88%;
+   }
+/*=================================================== Media Queries ==================================================*/
+
+
 @media (max-width: 320px)
 {
     .display-1{
