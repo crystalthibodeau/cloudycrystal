@@ -18,7 +18,7 @@ public class Post {
     private String body;
 
     @Column(nullable = false)
-    String postedAt;
+    private String postedAt;
 
     public Post(){
     }
@@ -28,20 +28,6 @@ public class Post {
     @JoinColumn(name="user_id")
     private User user;
 
-//    @ManyToMany
-//    @JoinTable(
-//
-//            name = "recipes_categories",
-//            joinColumns = {@JoinColumn(name = "recipe_id")},
-//            inverseJoinColumns = {@JoinColumn(name = "category_id")}
-//    )
-//    private List<Categories> categories;
-
-
-
-    //Many to many annotation to User model for favorites
-//    @ManyToMany(mappedBy = "favorites")
-//    private List<User> favoritedBy;
 
     //One to many annotation to RecipeImages model
     @Column(nullable = false)
@@ -67,13 +53,6 @@ public class Post {
         this.title = title;
     }
 
-//    public List<User> getFavoritedBy() {
-//        return favoritedBy;
-//    }
-
-//    public void setFavoritedBy(List<User> favoritedBy) {
-//        this.favoritedBy = favoritedBy;
-//    }
 
     public User getUser() { return user; }
 
@@ -87,14 +66,6 @@ public class Post {
     public void setPostImageUrl(String postImageUrl) {
         this.postImageUrl = postImageUrl;
     }
-
-//    public List<Categories> getCategories() {
-//        return categories;
-//    }
-
-//    public void setCategories(List<Categories> categories) {
-//        this.categories = categories;
-//    }
 
 //    public List<Comments> getComments() {
 //        return comments;
