@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="posts")
-public class Post {
+public class Posts {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class Post {
     @Column(nullable = false)
     private String postedAt;
 
-    public Post(){
+    public Posts(){
     }
 
     //Many to one annotation to User model

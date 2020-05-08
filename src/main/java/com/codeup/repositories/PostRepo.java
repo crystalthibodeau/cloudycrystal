@@ -1,7 +1,7 @@
 package com.codeup.repositories;
 
-import com.codeup.models.Post;
+import com.codeup.models.Posts;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PostRepo extends JpaRepository<Post, Long> {
+public interface PostRepo extends JpaRepository<Posts, Long> {
 }

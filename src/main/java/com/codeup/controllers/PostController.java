@@ -1,6 +1,6 @@
 package com.codeup.controllers;
 
-import com.codeup.models.Post;
+import com.codeup.models.Posts;
 import com.codeup.models.User;
 import com.codeup.repositories.PostRepo;
 import com.codeup.repositories.UserRepo;
@@ -8,6 +8,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class PostController {
@@ -26,7 +28,8 @@ public class PostController {
 
     @GetMapping("/posts")
     public String getPost(Model model){
-        model.addAttribute("posts", postDao.findAll());
+//        List<Posts> posts = postDao.findAll();
+//        model.addAttribute("posts", posts);
         return "views/posts";
     }
 
@@ -55,14 +58,14 @@ public class PostController {
 
     @GetMapping("/posts/{id}/edit")
     public String editForm(@PathVariable long id, Model model) {
-        Post postToEdit = postDao.getOne(id);
+        Posts postToEdit = postDao.getOne(id);
         model.addAttribute("post", postToEdit);
         return "posts/edit";
     }
 
     @PostMapping("/posts/{id}/edit")
-    public String updatePost(@ModelAttribute Post post, @PathVariable long id) {
-        Post p = postDao.getOne(id);
+    public String updatePost(@ModelAttribute Posts post, @PathVariable long id) {
+        Posts p = postDao.getOne(id);
         p.setTitle(p.getTitle());
         p.setBody(p.getBody());
         postDao.save(post);
@@ -71,12 +74,12 @@ public class PostController {
 
     @GetMapping("/posts/create")
     public String createForm(Model model) {
-        model.addAttribute("post", new Post());
+        model.addAttribute("post", new Posts());
         return "views/createPost";
     }
 
     @PostMapping("/posts/create")
-    public String createPost(@ModelAttribute Post post) {
+    public String createPost(@ModelAttribute Posts post) {
         post.setUser(userDao.getOne(1L));
         postDao.save(post);
         return "redirect:/posts";

@@ -1,7 +1,6 @@
 package com.codeup.models;
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name="users")
@@ -47,7 +46,7 @@ public class User {
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Post> Posts;
+    private List<com.codeup.models.Posts> Posts;
 
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 //    private List<Comments> comments;
@@ -138,11 +137,11 @@ public class User {
         this.profileImageUrl = profileImageUrl;
     }
 
-    public List<Post> getPosts() {
+    public List<com.codeup.models.Posts> getPosts() {
         return Posts;
     }
 
-    public void setPosts(List<Post> posts) {
+    public void setPosts(List<com.codeup.models.Posts> posts) {
         Posts = posts;
     }
 }
