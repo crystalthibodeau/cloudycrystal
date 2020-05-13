@@ -35,21 +35,8 @@ public class User {
     public User() {
     }
 
-    //Many to many  relationship connection to recipes table
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name="users_favorites",
-//            joinColumns = {@JoinColumn(name="user_id")},
-//            inverseJoinColumns = {@JoinColumn(name="recipe_id")}
-//    )
-//    private List<Recipe> favorites;
-
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<com.codeup.models.Posts> Posts;
-
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-//    private List<Comments> comments;
 
     //Copy Constructor
     public User(User copy){
@@ -61,6 +48,7 @@ public class User {
         last_name = copy.last_name;
         profileImageUrl = copy.profileImageUrl;
         admin = copy.admin;
+        Posts = copy.Posts;
     }
 
     public User(String username, String email, String first_name, String last_name, String password) {
@@ -141,7 +129,7 @@ public class User {
         return Posts;
     }
 
-    public void setPosts(List<com.codeup.models.Posts> posts) {
+    public void setPosts(List<Posts> posts) {
         Posts = posts;
     }
 }

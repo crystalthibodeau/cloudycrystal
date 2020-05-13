@@ -33,9 +33,13 @@ public class Posts {
     @Column(nullable = false)
     private String postImageUrl;
 
-    //One to many annotation to Comments model
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
-//    private List<Comments> comments;
+    public Posts(String title, String body, String postedAt, User user, String postImageUrl) {
+        this.title = title;
+        this.body = body;
+        this.postedAt = postedAt;
+        this.user = user;
+        this.postImageUrl = postImageUrl;
+    }
 
     public long getId() {
         return id;
@@ -53,28 +57,6 @@ public class Posts {
         this.title = title;
     }
 
-
-    public User getUser() { return user; }
-
-    public void setUser(User user) { this.user = user;
-    }
-
-    public String getPostImageUrl() {
-        return postImageUrl;
-    }
-
-    public void setPostImageUrl(String postImageUrl) {
-        this.postImageUrl = postImageUrl;
-    }
-
-//    public List<Comments> getComments() {
-//        return comments;
-//    }
-
-//    public void setComments(List<Comments> comments) {
-//        this.comments = comments;
-//    }
-
     public String getBody() {
         return body;
     }
@@ -89,6 +71,22 @@ public class Posts {
 
     public void setPostedAt(String postedAt) {
         this.postedAt = postedAt;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getPostImageUrl() {
+        return postImageUrl;
+    }
+
+    public void setPostImageUrl(String postImageUrl) {
+        this.postImageUrl = postImageUrl;
     }
 }
 
